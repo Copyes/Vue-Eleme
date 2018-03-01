@@ -7,7 +7,10 @@
       <div class="content">
         <p class="title">粥品香坊（回龙观）</p>
         <p class="desc">蜂鸟专送/38分钟送达</p>
-        <p class="support"></p>
+        <div class="support">
+          <span class="icon decrease"></span>
+          <span class="text">在线支付满28减5</span>
+        </div>
       </div>
     </div>
     <div class="header-notice">
@@ -33,48 +36,102 @@ export default {
   background: rgba(71, 104, 138, 0.5);
   color: #fff;
   &-container {
+    position: relative;
     padding: 32/@bs;
+    font-size: 0;
     .avatar {
+      display: inline-block;
       width: 120/@bs;
       height: 120/@bs;
       img {
         width: 100%;
         height: 100%;
+        border-radius: 4/@bs;
       }
     }
     .content {
+      display: inline-block;
+      overflow: hidden;
+      margin-left: 32/@bs;
+      .title {
+        margin-bottom: 16/@bs;
+        padding-left: 68/@bs;
+        height: 36/@bs;
+        background: url('./brand@2x.png') no-repeat;
+        font-size: 36/@bs;
+      }
+      .desc {
+        margin-bottom: 16/@bs;
+        font-size: 24/@bs;
+        line-height: 1;
+      }
+      .support {
+        .icon {
+          display: inline-block;
+          margin-right: 8/@bs;
+          width: 24/@bs;
+          height: 24/@bs;
+          background-size: 24/@bs 24/@bs;
+          background-repeat: no-repeat;
+          vertical-align: top;
+
+          &.decrease {
+            background-image: url('./decrease_2@2x.png');
+          }
+
+          &.discount {
+            background-image: url('./discount_2@2x.png');
+          }
+
+          &.guarantee {
+            background-image: url('./guarantee_2@2x.png');
+          }
+
+          &.invoice {
+            background-image: url('./invoice_2@2x.png');
+          }
+
+          &.special {
+            background-image: url('./special_2@2x.png');
+          }
+        }
+
+        .text {
+          font-size: 20/@bs;
+          line-height: 24/@bs;
+        }
+      }
     }
   }
   &-notice {
     position: relative;
     overflow: hidden;
-    padding: 0 12/@bs;
-    height: 48/@bs;
+    padding: 0 44/@bs 0 24/@bs;
+    height: 56/@bs;
     background: rgba(7, 17, 27, 0.2);
     text-overflow: ellipsis;
     white-space: nowrap;
     font-size: 0;
-    line-height: 48/@bs;
+    line-height: 56/@bs;
     .icon-notice {
       display: inline-block;
       width: 44/@bs;
-      height: 48/@bs;
+      height: 56/@bs;
       background: url('./bulletin@2x.png') center no-repeat;
-      background-size: 44/@bs 28/@bs;
+      background-size: 44/@bs 24/@bs;
       vertical-align: middle;
     }
     .notice-desc {
-      margin-left: 8/@bs;
+      margin: 0 8/@bs;
       vertical-align: middle;
-      font-size: 26/@bs;
+      font-size: 24/@bs;
     }
     .icon-keyboard_arrow_right {
       position: absolute;
       top: 8/@bs;
-      right: 8/@bs;
-      font-size: 30/@bs;
+      right: 16/@bs;
+      font-size: 40/@bs;
     }
   }
 }
 </style>
-
