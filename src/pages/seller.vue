@@ -144,7 +144,7 @@ export default {
 @bs: 46.875rem;
 .seller {
   position: absolute;
-  top: 348/@bs;
+  top: 352/@bs;
   bottom: 0;
   left: 0;
   overflow: hidden;

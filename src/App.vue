@@ -38,7 +38,6 @@ export default {
   created() {
     const url = debug ? '/api/seller' : 'http://ustbhuangyi.com/sell/api/seller'
     this.$http.get(url + '?id=' + this.seller.id).then(response => {
-      console.log(response)
       response = response.data
       if (response.errno === ERR_OK) {
         this.seller = Object.assign({}, this.seller, response.data)
